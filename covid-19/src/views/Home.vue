@@ -1,14 +1,19 @@
 <template>
   <div class="home container">
     <v-carousel>
-    <v-carousel-item class="rounded-lg"
-      v-for="(item,i) in items"
-      :key="i"
-      :src="item.src"
-      reverse-transition="fade-transition"
-      transition="fade-transition"
-    ></v-carousel-item>
-  </v-carousel>
+      <v-carousel-item
+        class="rounded-lg"
+        v-for="(item,i) in items"
+        :key="i"
+        :src="item.src"
+        reverse-transition="fade-transition"
+        transition="fade-transition"
+      >
+        <v-row class="fill-height" align="center" justify="center">
+          <div class="display-2 grey--text">{{ item.title }}</div>
+        </v-row>
+      </v-carousel-item>
+    </v-carousel>
     <div v-for="country in countrys" :key="country.name">
       <h2>{{country.name}}</h2>
     </div>
@@ -18,25 +23,16 @@
 
 
 <script>
-
 export default {
   data() {
     return {
       countrys: [],
       items: [
-          {
-            src: '../assets/logo.png',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
+        {
+          src: require("../assets/pohon-salju.jpg"),
+          title: "Winter Tree",
+        },
+      ],
     };
   },
   created() {
