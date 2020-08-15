@@ -9,11 +9,18 @@
         reverse-transition="fade-transition"
         transition="fade-transition"
       >
-        <v-row class="fill-height" align="center" justify="center">
-          <div class="display-2 grey--text">{{ item.title }}</div>
+        <v-row class="fill-height container" align="center" justify="center">
+          <div class="display-2 white--text font-weight-thin">{{ item.title }}</div>
         </v-row>
       </v-carousel-item>
     </v-carousel>
+
+    <v-col cols="12" sm="6" md="3" class="justify-center">
+      <v-text-field placeholder="Search Country" outlined>
+        <v-icon>home</v-icon>
+      </v-text-field>
+    </v-col>
+
     <div v-for="country in countrys" :key="country.name">
       <h2>{{country.name}}</h2>
     </div>
@@ -45,7 +52,8 @@ export default {
 };
 </script>
 
-
+<style scoped>
+</style>
 
 
 
