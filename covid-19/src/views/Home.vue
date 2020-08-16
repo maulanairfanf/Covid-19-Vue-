@@ -1,8 +1,7 @@
 <template>
   <div class="home container">
-    <v-carousel>
+    <v-carousel class="rounded-lg">
       <v-carousel-item
-        class="rounded-lg"
         v-for="(item,i) in items"
         :key="i"
         :src="item.src"
@@ -15,11 +14,15 @@
       </v-carousel-item>
     </v-carousel>
 
-    <v-col cols="12" sm="6" md="3" class="justify-center">
-      <v-text-field placeholder="Search Country" outlined>
-        <v-icon>home</v-icon>
-      </v-text-field>
-    </v-col>
+    <v-row justify="center">
+      <v-col cols="12" sm="8" md="4" class="justify-center">
+        <v-text-field placeholder="Search Country" outlined>
+          <v-btn icon>
+            <v-icon>mdi-home</v-icon>
+          </v-btn>
+        </v-text-field>
+      </v-col>
+    </v-row>
 
     <div v-for="country in countrys" :key="country.name">
       <h2>{{country.name}}</h2>
@@ -38,6 +41,10 @@ export default {
         {
           src: require("../assets/pohon-salju.jpg"),
           title: "Winter Tree",
+        },
+        {
+          src: require("../assets/lampu.jpg"),
+          title: "Night Lamp",
         },
       ],
     };
