@@ -8,8 +8,8 @@
         reverse-transition="fade-transition"
         transition="fade-transition"
       >
-        <v-row class="fill-height container" align="center" justify="center">
-          <div class="display-2 white--text font-weight-thin">{{ item.title }}</div>
+        <v-row class="fill-height" align="center" justify="center">
+          <div class="display-2 white--text font-weight-thin" justify="center">{{ item.title }}</div>
         </v-row>
       </v-carousel-item>
     </v-carousel>
@@ -24,7 +24,7 @@
       </v-col>
     </v-row>
 
-    <div v-for="country in countrys" :key="country.name">
+    <div v-for="country in countrys" :key="country.name" class="grey--text">
       <h2>{{country.name}}</h2>
     </div>
   </div>
@@ -60,6 +60,9 @@ export default {
 </script>
 
 <style scoped>
+.white--text {
+  /* border: 2px solid white; */
+}
 </style>
 
 
