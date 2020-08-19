@@ -16,15 +16,11 @@
 
     <v-row justify="center">
       <v-col cols="12" sm="8" md="4" class="justify-center">
-        <v-text-field placeholder="Search Country" outlined>
-          <v-btn icon>
-            <v-icon>mdi-home</v-icon>
-          </v-btn>
-        </v-text-field>
+        <v-text-field type="text" v-model="search" placeholder="Search Country *Use Kapital" outlined></v-text-field>
       </v-col>
     </v-row>
 
-    <div v-for="country in countrys" :key="country.name" class="grey--text">
+    <div v-for="country in searchCountry" :key="country" class="grey--text">
       <h2>{{country.name}}</h2>
     </div>
   </div>
@@ -36,6 +32,7 @@
 export default {
   data() {
     return {
+      search: "",
       countrys: [],
       items: [
         {
@@ -55,6 +52,13 @@ export default {
       .then((data) => {
         this.countrys = data.countries;
       });
+  },
+  computed: {
+    searchCountry: function () {
+      return this.countrys.filter((data) => {
+        return data.name.match(this.search);
+      });
+    },
   },
 };
 </script>
