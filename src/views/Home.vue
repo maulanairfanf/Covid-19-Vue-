@@ -8,7 +8,7 @@
         reverse-transition="fade-transition"
         transition="fade-transition"
       >
-        <v-row class="fill-height" align="center" justify="center">
+        <v-row class="fill-height d-flex justify-center align-center">
           <div class="display-2 white--text font-weight-thin" justify="center">{{ item.title }}</div>
         </v-row>
       </v-carousel-item>
@@ -16,7 +16,12 @@
 
     <v-row justify="center">
       <v-col cols="12" sm="8" md="4" class="justify-center">
-        <v-text-field type="text" v-model="search" placeholder="Search Country *Use Kapital" outlined></v-text-field>
+        <v-text-field
+          type="text"
+          v-model="search"
+          placeholder="Search Country *Use Kapital"
+          outlined
+        ></v-text-field>
       </v-col>
     </v-row>
 
