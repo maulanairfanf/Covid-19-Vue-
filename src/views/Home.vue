@@ -42,7 +42,7 @@ export default {
       items: [
         {
           src: require("../assets/pohon-salju.jpg"),
-          title: "Winter Tree",
+          title: "Winter",
         },
         {
           src: require("../assets/lampu.jpg"),
