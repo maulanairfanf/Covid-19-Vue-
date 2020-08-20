@@ -69,9 +69,7 @@ export default {
 </script>
 
 <style scoped>
-.white--text {
-  /* border: 2px solid white; */
-}
+
 </style>
 
 
