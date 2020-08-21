@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Saved from '../views/Saved.vue'
+import Country from '../views/Country.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,10 @@ const routes = [{
         path: '/saved',
         name: 'saved',
         component: Saved
+    },{
+        path: '/country/:name',
+        name: 'country',
+        component : Country
     }
 ]
 
