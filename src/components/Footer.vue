@@ -1,35 +1,39 @@
 <template>
-  <v-footer dark padless>
-    <v-card flat tile class="indigo lighten-1 white--text text-center">
-      <v-card-text>
-        <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
-          <v-icon size="24px">{{ icon }}</v-icon>
+  <v-footer color="primary lighten-1" padless>
+    <v-row justify="center" align="center" no-gutters>
+      <h3 class="white--text ml-n16">
+        Find me on
+        <span class="ml-5">:</span>
+      </h3>
+      <a href="https://www.instagram.com/maulanairfanfirdian">
+        <v-btn color="white" text rounded class="my-2 ml-4">
+          <v-icon>mdi-instagram</v-icon>
         </v-btn>
-      </v-card-text>
-
-      <v-card-text
-        class="white--text pt-0"
-      >Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet. Mauris cursus commodo interdum. Praesent ut risus eget metus luctus accumsan id ultrices nunc. Sed at orci sed massa consectetur dignissim a sit amet dui. Duis commodo vitae velit et faucibus. Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel diam elementum tempor vel ut orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-text class="white--text">
+      </a>
+      <a href="https://github.com/maulanairfanf">
+        <v-btn color="white" text rounded class="my-2">
+          <v-icon>mdi-github</v-icon>
+        </v-btn>
+      </a>
+      <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
         {{ new Date().getFullYear() }} —
-        <strong>Vuetify</strong>
-      </v-card-text>
-    </v-card>
+        <strong>Covin</strong>
+      </v-col>
+    </v-row>
   </v-footer>
 </template>
+
 
 <script>
 export default {
   data() {
-    return {
-      icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
-    };
+    return {};
   },
 };
 </script>
 
 <style scoped>
+a {
+  text-decoration: none;
+}
 </style>
