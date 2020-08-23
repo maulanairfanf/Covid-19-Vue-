@@ -1,18 +1,5 @@
 <template>
   <div class="home container">
-    <!-- <v-carousel class="rounded-lg">
-      <v-carousel-item
-        v-for="(item,i) in items"
-        :key="i"
-        :src="item.src"
-        reverse-transition="fade-transition"
-        transition="fade-transition"
-      >
-        <v-row class="fill-height d-flex justify-center align-center">
-          <div class="display-2 white--text font-weight-thin" justify="center">{{ item.title }}</div>
-        </v-row>
-      </v-carousel-item>
-    </v-carousel>-->
     <v-row id="section1" class="dflex flex-lg-wrap">
       <v-flex id="caption" xs12 lg4>
         <h2>Covid-19 Alert</h2>
@@ -70,7 +57,7 @@
       </v-row>
     </v-layout>
 
-    <v-row id="section3" class="container d-flex justify-center align-center">
+    <v-row id="section3" class="container d-flex justify-center align-center mb-6">
       <v-flex xs12 lg4>
         <v-flex>
           <v-img max-width="80%" :src="pictVirus.src" aspect-ratio="1" class="rounded-lg"></v-img>
@@ -86,22 +73,37 @@
       </v-flex>
     </v-row>
 
-    <v-row justify="center">
+    <v-row id="filter-section" justify="center">
+      <v-list-item-title grey lighten-2 class="dflex justify-center">
+        <v-list-item class="dflex justify-center">
+          <h3 class="grey--text">Getting info from all countries</h3>
+        </v-list-item>
+      </v-list-item-title>
+
       <v-col cols="12" sm="8" md="4" class="justify-center">
-        <v-text-field
-          type="text"
-          v-model="search"
-          placeholder="Search Country *Use Kapital"
-          outlined
-        ></v-text-field>
+        <v-text-field type="text" v-model="search" placeholder="Filtered Country" outlined></v-text-field>
       </v-col>
     </v-row>
 
-    <div v-for="country in searchCountry" :key="country" class="grey--text">
-      <router-link v-bind:to="/country/ + country.name">
-        <h2>{{country.name}}</h2>
-      </router-link>
-    </div>
+    <v-row id="list-country" class="container">
+      <v-flex
+        v-for="country in searchCountry"
+        :key="country"
+        class="dflex flex-lg-wrap"
+        xs6
+        md4
+        lg3
+      >
+        <v-list-item class="dflex justify-end">
+          <v-list-item-title grey lighten-2>{{country.name}}</v-list-item-title>
+          <router-link id="link" v-bind:to="/country/ + country.name">
+            <v-list-item-icon>
+              <v-icon color="blue darken-2">info</v-icon>
+            </v-list-item-icon>
+          </router-link>
+        </v-list-item>
+      </v-flex>
+    </v-row>
   </div>
 </template>
 
@@ -121,25 +123,15 @@ export default {
       pictMask: {
         src: require("../assets/people-mask.png"),
       },
-      // items: [
-      //   {
-      //     src: require("../assets/pohon-salju.jpg"),
-      //     title: "Winter Tree",
-      //   },
-      //   {
-      //     src: require("../assets/lampu.jpg"),
-      //     title: "Night Lamp",
-      //   },
-      // ],
     };
   },
   created() {
     fetch("https://covid19.mathdro.id/api/countries")
       .then((Response) => Response.json())
       .then((data) => {
-        console.log(data.countries.length);
         this.countCountry = parseInt(data.countries.length);
         this.countrys = data.countries;
+        console.log(data.countries);
       })
       .catch(function (error) {
         console.log("error" + error);
@@ -148,7 +140,6 @@ export default {
     fetch("https://covid19.mathdro.id/api/")
       .then((Response) => Response.json())
       .then((data) => {
-        console.log(data.confirmed.value);
         this.infoCases = data;
       })
       .catch(function (error) {
@@ -170,6 +161,13 @@ export default {
 
 .home {
   font-family: "Nunito Sans", sans-serif;
+}
+
+#filter-section {
+}
+
+#link {
+  text-decoration: none;
 }
 
 /* section3 */
@@ -295,7 +293,7 @@ export default {
 }
 
 @media screen and (max-width: 768px) {
-  #caption {
+  #section1 #caption {
     z-index: 1;
     position: relative;
     transform: translate(0%, 0%);

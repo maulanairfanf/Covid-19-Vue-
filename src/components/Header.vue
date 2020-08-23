@@ -51,7 +51,4 @@ export default {
 </script>
 
 <style scoped>
-#test {
-  border: 2px solid black;
-}
 </style>
