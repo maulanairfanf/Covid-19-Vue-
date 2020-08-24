@@ -2,19 +2,21 @@
   <div class="home container">
     <v-row id="section1" class="d-flex flex-lg-wrap">
       <v-flex id="caption" xs12 md12 lg4>
-        <h2 class="heading-2">Covid-19 Alert</h2>
-        <h1 class="heading-1">Stay at Home to Stop</h1>
-        <h1 class="heading-1">Corona Virus Spread</h1>
-        <span class="tittle">Hentikan penyebarang Virus Corona dengan tetap berada dirumah.</span>
-        <br />
-        <span class="tittle">Jika merasa anda mengalami gejalanya cek disini</span>
-        <div class="text-center d-flex justify-start mt-2 mb-4">
-          <v-btn
-            to="/Symptoms"
-            rounded
-            color="light-blue accent-3 white--text text-capitalize"
-          >Check Symptoms</v-btn>
-        </div>
+        <v-flex lg10>
+          <h2 class="heading-2">Covid-19 Alert</h2>
+          <h1 class="heading-1">Stay at Home to Stop Corona Virus Spread</h1>
+          <!-- <h1 class="heading-1">Corona Virus Spread</h1> -->
+          <span class="tittle">Hentikan penyebarang Virus Corona dengan tetap berada dirumah, sayangi diri anda dan orang sekitar anda.</span>
+          <br />
+          <span class="tittle"></span>
+          <div class="text-center d-flex justify-start mt-2 mb-4">
+            <v-btn
+              to="/prevent"
+              rounded
+              color="light-blue accent-3 white--text text-capitalize"
+            >How To Prevent</v-btn>
+          </div>
+        </v-flex>
       </v-flex>
       <v-flex id="layout-right" class="d-flex ml-auto rounded-lg" xs12 md12 lg8>
         <v-row class="d-flex justify-center">
@@ -121,13 +123,15 @@
     </v-row>
 
     <v-row id="list-country" class="container d-flex ml-1">
-      <v-flex
+      <v-card
+        outlined
+        flat
+        raised
+        width="300px"
         v-for="country in searchCountry"
         :key="country"
-        class="d-flex flex-lg-wrap"
-        xs6
-        md4
-        lg3
+        class="mx-auto d-flex flex-lg-wrap mt-1"
+        style="border : none"
       >
         <v-list-item class="d-flex justify-end">
           <v-list-item-title>{{country.name}}</v-list-item-title>
@@ -135,10 +139,10 @@
             <v-icon color="blue darken-2">info</v-icon>
           </v-btn>
         </v-list-item>
-      </v-flex>
+      </v-card>
     </v-row>
 
-    <v-row justify="center">
+    <!-- <v-row justify="center">
       <v-btn color="primary" dark @click.stop="dialog = true">Open Dialog</v-btn>
 
       <v-dialog v-model="dialog" max-width="290">
@@ -156,7 +160,7 @@
           </v-card-actions>
         </v-card>
       </v-dialog>
-    </v-row>
+    </v-row>-->
   </div>
 </template>
 

@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Saved from '../views/Saved.vue'
 import Country from '../views/Country.vue'
-import Symptoms from '../views/Symptoms.vue'
+import Prevent from '../views/Prevent.vue'
 import Impact from '../views/Impact.vue'
 
 Vue.use(VueRouter)
@@ -28,9 +28,9 @@ const routes = [{
         name: 'country',
         component: Country
     }, {
-        path: '/symptoms',
-        name: 'symptoms',
-        component: Symptoms
+        path: '/prevent',
+        name: 'prevent',
+        component: Prevent
     }, {
         path: '/impact',
         name: 'impact',

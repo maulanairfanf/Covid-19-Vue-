@@ -2,7 +2,7 @@
   <nav class>
     <v-toolbar flat app class="grey--text">
       <v-app-bar-nav-icon app @click="drawer = !drawer "></v-app-bar-nav-icon>
-      <v-toolbar-title >
+      <v-toolbar-title>
         <span>Covid-19</span>
       </v-toolbar-title>
     </v-toolbar>
@@ -24,6 +24,24 @@
           </v-list-item-icon>
           <v-list-item-content>
             <v-list-item-title>About</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item router to="/prevent" link>
+          <v-list-item-icon>
+            <v-icon>security</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Prevent</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item router to="/impact" link>
+          <v-list-item-icon>
+            <v-icon>warning</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Impact</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 

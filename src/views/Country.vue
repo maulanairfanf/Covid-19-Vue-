@@ -1,22 +1,30 @@
 <template>
-  <div class="container mt-10 justify-center">
+  <div class="country container mt-10 justify-center">
     <v-text-field v-show="loader" color="light-blue 
 " loading></v-text-field>
-    <!-- <v-row> -->
-    <v-img width="90%" class="d-flex justify-center align-center mx-auto" :src="pict.src">
-      <v-flex class="text-center" style="border : 2px solid black">
-        <h3>{{countrys.countryRegion}}</h3>
-        <h3>country : {{countrys.countryRegion}}</h3>
-        <h3>confirmed : {{countrys.confirmed}}</h3>
-        <h3>recovered : {{countrys.recovered}}</h3>
-        <h3>active : {{countrys.active}}</h3>
-        <h3>deaths : {{countrys.deaths}}</h3>
+
+    <v-img max-width="90%" class="d-flex justify-center align-center mx-auto" :src="pict.src">
+      <v-flex class="box text-center mb-16 mx-auto mt-5 pt-10 pb-10 rounded-lg" xs8 lg3>
+        <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
+          <p class="heading-2">{{countrys.countryRegion}}</p>
+        </v-flex>
+        <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
+          <p class="heading-2">Confirmed : {{countrys.confirmed}}</p>
+        </v-flex>
+        <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
+          <p class="green--text text-lighten-1">Recovered : {{countrys.recovered}}</p>
+        </v-flex>
+        <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
+          <p class>Active : {{countrys.active}}</p>
+        </v-flex>
+        <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
+          <p class="red--text text--lighten-1">Deaths : {{countrys.deaths}}</p>
+        </v-flex>
         <div class="my-2" @click="$router.go(-1)">
-          <v-btn color="primary">Back</v-btn>
+          <v-btn color="#0091EA" class="white--text">Back to home</v-btn>
         </div>
       </v-flex>
     </v-img>
-    <!-- </v-row> -->
   </div>
 </template>
 
@@ -49,4 +57,12 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+.country {
+  font-family: "Nunito Sans", sans-serif;
+}
+.box {
+  background-color: white;
+  box-shadow: 0px 3px 3px 7px #eeeeee;
+}
 </style>
