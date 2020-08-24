@@ -6,7 +6,9 @@
           <h2 class="heading-2">Covid-19 Alert</h2>
           <h1 class="heading-1">Stay at Home to Stop Corona Virus Spread</h1>
           <!-- <h1 class="heading-1">Corona Virus Spread</h1> -->
-          <span class="tittle">Hentikan penyebarang Virus Corona dengan tetap berada dirumah, sayangi diri anda dan orang sekitar anda.</span>
+          <span
+            class="tittle"
+          >Hentikan penyebarang Virus Corona dengan tetap berada dirumah, sayangi diri anda dan orang sekitar anda.</span>
           <br />
           <span class="tittle"></span>
           <div class="text-center d-flex justify-start mt-2 mb-4">
@@ -89,7 +91,7 @@
       </v-flex>
     </v-row>
 
-    <v-layout class="container d-flex justify-center align-center" row>
+    <v-row class="container d-flex justify-center align-center" row>
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
         <h2 class="heading-2">Covid-19 Overall</h2>
       </v-flex>
@@ -108,7 +110,7 @@
           color="light-blue accent-3 white--text text-capitalize"
         >See Impact</v-btn>
       </v-flex>
-    </v-layout>
+    </v-row>
 
     <v-row id="filter-section" justify="center">
       <v-list-item-title grey lighten-2 class="d-flex justify-center">
