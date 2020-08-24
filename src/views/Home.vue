@@ -1,22 +1,29 @@
 <template>
   <div class="home container">
-    <v-row id="section1" class="dflex flex-lg-wrap">
-      <v-flex id="caption" xs12 lg4>
-        <h2>Covid-19 Alert</h2>
-        <h1>Stay at Home to Stop</h1>
-        <h1>Corona Virus Spread</h1>
-        <span>Hentikan penyebarang Virus Corona dengan tetap berada dirumah.</span>
+    <v-row id="section1" class="d-flex flex-lg-wrap">
+      <v-flex id="caption" xs12 md12 lg4>
+        <h2 class="heading-2">Covid-19 Alert</h2>
+        <h1 class="heading-1">Stay at Home to Stop</h1>
+        <h1 class="heading-1">Corona Virus Spread</h1>
+        <span class="tittle">Hentikan penyebarang Virus Corona dengan tetap berada dirumah.</span>
         <br />
-        <span>Jika merasa anda mengalami gejalanya cek disini bro !</span>
+        <span class="tittle">Jika merasa anda mengalami gejalanya cek disini</span>
+        <div class="text-center d-flex justify-start mt-2 mb-4">
+          <v-btn
+            to="/Symptoms"
+            rounded
+            color="light-blue accent-3 white--text text-capitalize"
+          >Check Symptoms</v-btn>
+        </div>
       </v-flex>
-      <v-flex id="layout-right" class="dflex ml-auto rounded-lg" xs12 lg8>
-        <v-row class="dflex justify-center">
+      <v-flex id="layout-right" class="d-flex ml-auto rounded-lg" xs12 md12 lg8>
+        <v-row class="d-flex justify-center">
           <v-img max-width="60%" id="pict" :src="pictMask.src" aspect-ratio="1" contain></v-img>
         </v-row>
       </v-flex>
     </v-row>
 
-    <v-layout id="section2" class="dflex justify-center text-center">
+    <v-layout id="section2" class="d-flex justify-center text-center">
       <v-row id="section2-1" lg12>
         <v-flex xs12 lg3>
           <v-list-item-content>
@@ -64,45 +71,91 @@
         </v-flex>
       </v-flex>
       <v-flex xs12 lg4 id="caption">
-        <h2>So, what is</h2>
-        <h1>Covid-19?</h1>
-        <span>
+        <h2 class="heading-2">So, what is</h2>
+        <h1 class="heading-1">Covid-19?</h1>
+        <span class="tittle">
           Covid-19 adalah penyakit menular yang disebabkan oleh jenis coronavirus yang baru ditemukan bulan Desember 2019.
           Virus baru dan penyakit yang disebabkannya ini tidak dikenal sebelum mulainya wabah di Wuhan Tiongkok Covid-19 ini sekarang menjadi sebuah pandemi yang terjadi di banyak negara di seluruh dunia.
+          <div class="text-center d-flex justify-start mt-2">
+            <v-btn
+              to="/about"
+              rounded
+              color="light-blue accent-3 white--text text-capitalize"
+            >See Details</v-btn>
+          </div>
         </span>
       </v-flex>
     </v-row>
 
+    <v-layout class="container d-flex justify-center align-center" row>
+      <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
+        <h2 class="heading-2">Covid-19 Overall</h2>
+      </v-flex>
+      <v-flex xs12 md12 lg6 class="d-flex justify-center align-center text-center">
+        <h1
+          class="heading-1"
+        >Over 780k People Died, We Must Stick Together to Going Through Over This</h1>
+      </v-flex>
+      <v-flex xs12 m12 lg10 class="d-flex justify-center align-center text-center tittle">
+        <p>Akibat covid-19 tardapat ± 1.010.579 orang pekerja yang terkena dampak rincinnya 873.090 pekerja dari 17.224 perusahaan dirumahkan, sedangkan 137.489 pekerja di PHK dari 22.753 perusahaan. Dalam bidang pendidikan sekolah sekolah dan universitas di liburkan aktivitas belajar mengajar dilakukan secara daring</p>
+      </v-flex>
+      <v-flex xs12 m12 lg10 class="d-flex justify-center align-center text-center tittle">
+        <v-btn
+          to="/Impact"
+          rounded
+          color="light-blue accent-3 white--text text-capitalize"
+        >See Impact</v-btn>
+      </v-flex>
+    </v-layout>
+
     <v-row id="filter-section" justify="center">
-      <v-list-item-title grey lighten-2 class="dflex justify-center">
-        <v-list-item class="dflex justify-center">
+      <v-list-item-title grey lighten-2 class="d-flex justify-center">
+        <v-list-item class="d-flex justify-center">
           <h3 class="grey--text">Getting info from all countries</h3>
         </v-list-item>
       </v-list-item-title>
 
       <v-col cols="12" sm="8" md="4" class="justify-center">
-        <v-text-field type="text" v-model="search" placeholder="Filtered Country" outlined></v-text-field>
+        <v-text-field v-model="search" type="text" placeholder="Filtered Country" outlined></v-text-field>
       </v-col>
     </v-row>
 
-    <v-row id="list-country" class="container">
+    <v-row id="list-country" class="container d-flex ml-1">
       <v-flex
         v-for="country in searchCountry"
         :key="country"
-        class="dflex flex-lg-wrap"
+        class="d-flex flex-lg-wrap"
         xs6
         md4
         lg3
       >
-        <v-list-item class="dflex justify-end">
-          <v-list-item-title grey lighten-2>{{country.name}}</v-list-item-title>
-          <router-link id="link" v-bind:to="/country/ + country.name">
-            <v-list-item-icon>
-              <v-icon color="blue darken-2">info</v-icon>
-            </v-list-item-icon>
-          </router-link>
+        <v-list-item class="d-flex justify-end">
+          <v-list-item-title>{{country.name}}</v-list-item-title>
+          <v-btn icon @click="select" v-bind:to="/country/ + country.name">
+            <v-icon color="blue darken-2">info</v-icon>
+          </v-btn>
         </v-list-item>
       </v-flex>
+    </v-row>
+
+    <v-row justify="center">
+      <v-btn color="primary" dark @click.stop="dialog = true">Open Dialog</v-btn>
+
+      <v-dialog v-model="dialog" max-width="290">
+        <v-card>
+          <v-card-title class="headline">Use Google's location service?</v-card-title>
+
+          <v-card-text>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</v-card-text>
+
+          <v-card-actions>
+            <v-spacer></v-spacer>
+
+            <v-btn color="green darken-1" text @click="dialog = false">Disagree</v-btn>
+
+            <v-btn color="green darken-1" text @click="dialog = false">Agree</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-row>
   </div>
 </template>
@@ -113,7 +166,10 @@
 export default {
   data() {
     return {
+      name: this.$route.params.name,
+      dialog: false,
       search: "",
+      test: "",
       countrys: [],
       countCountry: "",
       infoCases: "",
@@ -145,6 +201,18 @@ export default {
       .catch(function (error) {
         console.log("error" + error);
       });
+
+    fetch(
+      "https://covid19.mathdro.id/api/countries/" + this.name + "/confirmed"
+    )
+      .then((Response) => Response.json())
+      .then((data) => {
+        this.test = data[0];
+        // this.loader = false;
+      })
+      .catch(function (error) {
+        console.log("error" + error);
+      });
   },
   computed: {
     searchCountry: function () {
@@ -153,52 +221,42 @@ export default {
       });
     },
   },
+  methods: {
+    select() {
+      // country.name;
+    },
+  },
 };
 </script>
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
-
 .home {
   font-family: "Nunito Sans", sans-serif;
 }
 
-#filter-section {
-}
-
-#link {
-  text-decoration: none;
-}
-
-/* section3 */
-#section3 {
-}
-
-#section3 #caption h2 {
+/* universal */
+.heading-1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 33px;
-
-  color: #ef4565;
-}
-
-#section3 #caption h1 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 48px;
+  font-size: 36px;
   line-height: 53px;
 
   color: #094067;
 }
 
-#section3 #caption span {
+.heading-2 {
   font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 161.4%;
-  /* or 29px */
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 33px;
+  color: #ef4565;
+}
 
+.tittle {
+  font-style: normal;
+  font-size: 16px;
+  line-height: 161.4%;
   color: #5f6c7b;
 }
 
@@ -297,6 +355,9 @@ export default {
     z-index: 1;
     position: relative;
     transform: translate(0%, 0%);
+  }
+  .home {
+    margin: 10px;
   }
 }
 </style>
