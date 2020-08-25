@@ -2,8 +2,8 @@
   <nav class>
     <v-toolbar flat app class="grey--text">
       <v-app-bar-nav-icon app @click="drawer = !drawer "></v-app-bar-nav-icon>
-      <v-toolbar-title>
-        <span>Covid-19</span>
+      <v-toolbar-title >
+          <span>CovinFo</span>
       </v-toolbar-title>
     </v-toolbar>
 
@@ -69,4 +69,8 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+nav {
+  font-family: "Nunito Sans", sans-serif;
+}
 </style>

@@ -2,7 +2,7 @@
   <v-container class="Symptoms container mt-6">
     <div>
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
-        <h2 class="heading-1">{{heading}}</h2>
+        <span class="heading-1 text-center">{{heading}}</span>
       </v-flex>
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center mt-2 mb-8">
         <v-flex lg6>
@@ -15,7 +15,6 @@
       <v-card
         v-for="(pict,p) in picts"
         :key="p"
-        :src="picts.src"
         class="mx-auto mb-6 container justify-center align-center"
         flat
         tile

@@ -1,5 +1,5 @@
 <template>
-  <div class="country container mt-10 justify-center">
+  <v-container class="country mt-10 justify-center">
     <v-text-field v-show="loader" color="light-blue 
 " loading></v-text-field>
 
@@ -25,7 +25,7 @@
         </div>
       </v-flex>
     </v-img>
-  </div>
+  </v-container>
 </template>
 
 <script>

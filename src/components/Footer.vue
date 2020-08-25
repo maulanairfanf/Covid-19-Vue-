@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="primary lighten-1" padless>
+  <v-footer color="primary lighten-1 footer" padless>
     <v-row justify="center" align="center" no-gutters>
       <h3 class="white--text ml-n16">
         Find me on
@@ -17,7 +17,7 @@
       </a>
       <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
         {{ new Date().getFullYear() }} —
-        <strong>Covin</strong>
+        <strong>CovinFo</strong>
       </v-col>
     </v-row>
   </v-footer>
@@ -33,6 +33,10 @@ export default {
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+.footer {
+  font-family: "Nunito Sans", sans-serif;
+}
 a {
   text-decoration: none;
 }
