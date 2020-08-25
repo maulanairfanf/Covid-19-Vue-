@@ -91,19 +91,19 @@
       </v-flex>
     </v-row>
 
-    <v-layout class="container" row>
-      <v-flex xs12 md12 lg12 class="d-flex justify-center align-center text-center">
+    <v-layout class="container justify-center align-center" row>
+      <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
         <h2 class="heading-2">Covid-19 Overall</h2>
       </v-flex>
-      <v-flex xs12 md12 lg12 class="d-flex justify-center align-center text-center">
+      <v-flex xs12 md12 lg6 class="d-flex justify-center align-center text-center">
         <h1
           class="heading-1"
         >Over 780k People Died, We Must Stick Together to Going Through Over This</h1>
       </v-flex>
-      <v-flex xs12 m12 lg12 class="d-flex justify-center align-center text-center tittle">
+      <v-flex xs12 m12 lg10 class="d-flex justify-center align-center text-center tittle">
         <p>Akibat covid-19 tardapat ± 1.010.579 orang pekerja yang terkena dampak rincinnya 873.090 pekerja dari 17.224 perusahaan dirumahkan, sedangkan 137.489 pekerja di PHK dari 22.753 perusahaan. Dalam bidang pendidikan sekolah sekolah dan universitas di liburkan aktivitas belajar mengajar dilakukan secara daring</p>
       </v-flex>
-      <v-flex xs12 m12 lg12 class="d-flex justify-center align-center text-center tittle">
+      <v-flex xs12 m12 lg10 class="d-flex justify-center align-center text-center tittle">
         <v-btn
           to="/Impact"
           rounded
