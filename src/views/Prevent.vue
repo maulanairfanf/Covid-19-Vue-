@@ -5,7 +5,7 @@
         <span class="heading-1 text-center">{{heading}}</span>
       </v-flex>
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center mt-2 mb-8">
-        <v-flex lg6>
+        <v-flex lg4>
           <p class="sub-heading text-center">{{subHeading}}</p>
         </v-flex>
       </v-flex>
@@ -19,7 +19,7 @@
         flat
         tile
         min-height="200"
-        max-width="400"
+        max-width="450"
       >
         <v-flex class="d-flex justify-center">
           <v-img max-width="250" :src="pict.src" contain></v-img>
@@ -90,9 +90,6 @@ export default {
 }
 
 .container-costum {
-  width: 75%;
-
-  margin-left: 10%;
 }
 
 .heading-1 {

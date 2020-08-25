@@ -1,7 +1,7 @@
 <template>
   <v-container class="home container--fluid">
     <v-row id="section1" class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16">
-      <v-flex class="d-flex justify-end" xs12 md12 lg5>
+      <v-flex class="d-flex justify-end text-center" xs12 md12 lg5>
         <v-flex lg6>
           <h3 class="heading-2">Covid-19 Alert</h3>
           <h2 class="heading-1">Stay at Home to Stop Corona Virus Spread</h2>
@@ -11,7 +11,7 @@
           >Hentikan penyebarang Virus Corona dengan tetap berada dirumah, sayangi diri anda dan orang sekitar anda.</span>
           <br />
           <span class="tittle"></span>
-          <div class="text-center d-flex justify-start mt-2 mb-4">
+          <div class="text-center d-flex justify-center mt-2 mb-4">
             <v-btn
               to="/prevent"
               rounded
@@ -68,29 +68,28 @@
       </v-row>
     </v-layout>
 
-    <v-row id="section3" class="container d-flex justify-center align-center mb-16 mt-16">
-      <v-col>
-        <v-flex class="d-flex justify-center">
-          <v-img max-width="50%" :src="pictVirus.src" aspect-ratio="1" class="rounded-lg ml-16"></v-img>
-        </v-flex>
-      </v-col>
-      <v-col>
-        <v-flex lg8>
+    <v-row id="section3" class="d-flex justify-center align-center mb-16 mt-16">
+      <v-flex lg7 class="d-flex justify-center">
+        <v-img max-width="40%" :src="pictVirus.src" aspect-ratio="1" class="rounded-lg ml-16"></v-img>
+      </v-flex>
+
+      <v-flex lg5>
+        <v-flex  lg7 >
           <h2 class="heading-2">So, what is</h2>
           <h1 class="heading-1">Covid-19?</h1>
           <span class="tittle">
             Covid-19 adalah penyakit menular yang disebabkan oleh jenis coronavirus yang baru ditemukan bulan Desember 2019.
             Virus baru dan penyakit yang disebabkannya ini tidak dikenal sebelum mulainya wabah di Wuhan Tiongkok Covid-19 ini sekarang menjadi sebuah pandemi yang terjadi di banyak negara di seluruh dunia.
-            <div class="text-center d-flex justify-start mt-2">
-              <v-btn
-                to="/about"
-                rounded
-                color="light-blue accent-3 white--text text-capitalize"
-              >See Details</v-btn>
-            </div>
           </span>
+          <div class="text-center d-flex justify-start mt-4">
+            <v-btn
+              to="/about"
+              rounded
+              color="light-blue accent-3 white--text text-capitalize"
+            >See Details</v-btn>
+          </div>
         </v-flex>
-      </v-col>
+      </v-flex>
     </v-row>
 
     <v-row class="d-flex justify-center align-center mb-16">
@@ -125,7 +124,7 @@
       </v-col>
     </v-row>
 
-    <v-row class="container d-flex justify-center mx-auto">
+    <v-row class="d-flex justify-center mx-auto">
       <v-card
         outlined
         flat

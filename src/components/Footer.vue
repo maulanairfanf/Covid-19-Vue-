@@ -1,7 +1,7 @@
 <template>
-  <v-footer color="primary lighten-1 footer" padless>
+  <v-footer color="primary lighten-1 footer mt-0 pt-0" padless>
     <v-row justify="center" align="center" no-gutters>
-      <h3 class="white--text ml-n16">
+      <h3 class="white--text ">
         Find me on
         <span class="ml-5">:</span>
       </h3>
@@ -36,6 +36,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
 .footer {
   font-family: "Nunito Sans", sans-serif;
+  border : 2px solid black;
 }
 a {
   text-decoration: none;
