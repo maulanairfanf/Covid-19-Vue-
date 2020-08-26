@@ -26,8 +26,8 @@
         <h2 class="grey--text text--darken-3">{{pict.heading}}</h2>
       </v-flex>
       <v-flex lg4 class="d-flex justify-center align-center media">
-        <v-flex lg10>
-          <span class="descTitle">{{pict.title | shorttext(100) }}</span>
+        <v-flex lg8 class="ml-2 mr-2">
+          <span class="descTitle">{{pict.title | shorttext(120) }}</span>
           <span class="descEmpty">{{pict.title}}</span>
           <a class="text-center" v-on:click="toggler($event)">Read More</a>
         </v-flex>
@@ -110,11 +110,5 @@ export default {
 
 .descEmpty {
   display: none;
-}
-
-@media screen and (max-width: 1024px) {
-  .media {
-    text-align: center;
-  }
 }
 </style>
