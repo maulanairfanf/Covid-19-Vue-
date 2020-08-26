@@ -46,18 +46,17 @@ export default {
           src: require("../assets/economy.svg"),
           heading: "Ekonomi",
           title:
-            "Berbagai industri terkena dampak karena ketergantungan pada rantai pasokan global sehingga menghambat proses produksi.memberlakukan sistem pengurangan karyawan menurunnya produksi sehingga perusahaan bisa mengalami kerugian yang berujung PHK. seuruh dunia mengalami pelemahan ekonomi sehingga menyebabkan harga komoditas turun dan ekspor Indonesia ke beberapa negara juga terhenti Pemberlakuan social distancing dan lockdown mengakibatkan masyarakat tidak dapat beraktivitas di luar rumah bahkan untuk mereka yang berstatus sebagai pekerja harian atau pedagang kaki lima.pasar saham terjun bebas karena dampak virus Corona secara global akan menyebabkan para investor enggan mengeluarkan uangnya untuk berinvestasi. ",
+            "Berbagai industri terkena dampak karena ketergantungan pada rantai pasokan global sehingga menghambat proses produksi. Memberlakukan sistem pengurangan karyawan menurunnya produksi sehingga perusahaan bisa mengalami kerugian yang berujung PHK. Seluruh dunia mengalami pelemahan ekonomi sehingga menyebabkan harga komoditas turun dan ekspor Indonesia ke beberapa negara juga terhenti Pemberlakuan social distancing dan lockdown mengakibatkan masyarakat tidak dapat beraktivitas di luar rumah bahkan untuk mereka yang berstatus sebagai pekerja harian atau pedagang kaki lima. Pasar saham terjun bebas karena dampak virus Corona secara global akan menyebabkan para investor enggan mengeluarkan uangnya untuk berinvestasi. ",
         },
         {
           hex: "#BBDEFB",
           src: require("../assets/culture.svg"),
           heading: "Budaya",
           title:
-            "Bentuk peribadatan keagamaan yang sedikit terkikis, diantaranya adalah budaya jamaah sholat wajib lima waktu dan sholat tarawih serta  tadarusan yang tidak lagi dilaksankan di masjid dan mushola warga setempat warga masyarakat menjadi kurang berinteraksi antar satu dengan yang lainnya individualis melemahnya pelestarian budaya jabat tangan tersebut, akan memberikan celah yang besar terhadap adanya kerentanan sosial antar masyarakat.",
+            "Bentuk peribadatan keagamaan yang sedikit terkikis, diantaranya adalah budaya jamaah sholat wajib lima waktu dan sholat tarawih serta tadarusan yang tidak lagi dilaksankan di masjid dan mushola warga setempat warga masyarakat menjadi kurang berinteraksi antar satu dengan yang lainnya individualis melemahnya pelestarian budaya jabat tangan tersebut, akan memberikan celah yang besar terhadap adanya kerentanan sosial antar masyarakat.",
         },
         {
           hex: "#E3F2FD",
-
           src: require("../assets/teach.svg"),
           heading: "Pendidikan",
           title:

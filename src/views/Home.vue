@@ -1,5 +1,7 @@
 <template>
   <v-container class="home">
+    <v-text-field v-show="loader" color="light-blue 
+" loading></v-text-field>
     <v-row id="section1" class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16">
       <v-flex class="d-flex justify-end text-center" xs12 md12 lg5>
         <v-flex lg6>
@@ -8,7 +10,7 @@
 
           <span
             class="tittle"
-          >Hentikan penyebarang Virus Corona dengan tetap berada dirumah, sayangi diri anda dan orang sekitar anda.</span>
+          >Hentikan penyebaran Virus Corona dengan tetap berada dirumah, sayangi diri anda dan orang sekitar anda.</span>
           <br />
           <span class="tittle"></span>
           <div class="text-center d-flex justify-center mt-2 mb-4">
@@ -184,18 +186,6 @@ export default {
       .then((Response) => Response.json())
       .then((data) => {
         this.infoCases = data;
-      })
-      .catch(function (error) {
-        console.log("error" + error);
-      });
-
-    fetch(
-      "https://covid19.mathdro.id/api/countries/" + this.name + "/confirmed"
-    )
-      .then((Response) => Response.json())
-      .then((data) => {
-        this.test = data[0];
-        // this.loader = false;
       })
       .catch(function (error) {
         console.log("error" + error);

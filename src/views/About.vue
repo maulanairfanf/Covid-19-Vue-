@@ -47,8 +47,10 @@
     <v-row class="d-flex justify-center container mx-auto">
       <v-flex lg12 class="d-flex justify-center">
         <v-flex class="text-center">
-          <h1  class="grey--text text--darken-3 mt-4">Symptoms</h1>
-          <h3 class="grey--text text--darken-1 mt-4 mb-6">Jika anda merasakan gejala dibawah ini segera periksakan ke dokter</h3>
+          <h1 class="grey--text text--darken-3 mt-4">Symptoms</h1>
+          <h3
+            class="grey--text text--darken-1 mt-4 mb-6"
+          >Jika anda merasakan gejala dibawah ini segera periksakan ke dokter</h3>
         </v-flex>
       </v-flex>
       <v-flex v-for="gejala in pictGejala" :key="gejala" class="d-flex flex-wrap">
@@ -73,6 +75,7 @@
 export default {
   data() {
     return {
+      loader: true,
       pictGlobe: {
         src: require("../assets/globe.jpg"),
       },
@@ -101,6 +104,13 @@ export default {
       ],
     };
   },
+  created() {
+    document.onreadystatechange = function () {
+      if (document.readyState == "complete") {
+        this.loader = false;
+      }
+    };
+  },
 };
 </script>
 
@@ -116,6 +126,13 @@ export default {
 .section-2 {
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 768px) {

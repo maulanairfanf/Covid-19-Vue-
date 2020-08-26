@@ -2,7 +2,7 @@
   <v-container class="Symptoms container mt-6">
     <div>
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
-        <span class="heading-1 text-center grey--text text--darken-2 "> <span class="light-green--text text--darken-1">Protcet</span> {{heading}}</span>
+        <span class="heading-1 text-center grey--text text--darken-2 "> <span class="light-green--text text--darken-1">Protect</span> {{heading}}</span>
       </v-flex>
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center mt-2 mb-8">
         <v-flex lg4>
