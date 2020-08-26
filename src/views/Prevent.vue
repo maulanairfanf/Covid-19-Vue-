@@ -2,11 +2,11 @@
   <v-container class="Symptoms container mt-6">
     <div>
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
-        <span class="heading-1 text-center">{{heading}}</span>
+        <span class="heading-1 text-center grey--text text--darken-2 "> <span class="light-green--text text--darken-1">Protcet</span> {{heading}}</span>
       </v-flex>
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center mt-2 mb-8">
         <v-flex lg4>
-          <p class="sub-heading text-center">{{subHeading}}</p>
+          <p class="sub-heading text-center grey--text text--darken-1">{{subHeading}}</p>
         </v-flex>
       </v-flex>
     </div>
@@ -38,7 +38,7 @@
 export default {
   data() {
     return {
-      heading: "Protect yourself and those around you",
+      heading: " yourself and those around you",
       subHeading:
         "Sampai saat ini belum ditemukan vaksin yang dapat menyembuhkan virus corona, cara terbaik untuk saat ini adalah dengan cara menghindari virus tersebut. Berikut hal - hal yang perlu diperhatikan untuk menjaga diri dan orang di sekitar anda ",
       picts: [
@@ -97,21 +97,10 @@ export default {
   font-weight: bold;
   font-size: 32px;
   line-height: 53px;
-
-  color: #094067;
-}
-
-.heading-2 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 33px;
-  color: #ef4565;
 }
 
 .sub-heading {
   font-style: normal;
   font-size: 14px;
-  color: #5f6c7b;
 }
 </style>

@@ -1,7 +1,9 @@
 <template>
   <v-container class="Impact container--fluid">
     <v-col class="d-flex justify-center align-center pt-10">
-      <h1 class="grey--text text--darken-3"> <span class="red--text">Impact</span> Of The World</h1>
+      <h1 class="grey--text text--darken-3">
+        <span class="red--text">Impact</span> Of The World
+      </h1>
     </v-col>
     <v-col class="d-flex justify-center align-center pb-10">
       <v-flex lg6>
@@ -24,7 +26,7 @@
         <h2 class="grey--text text--darken-3">{{pict.heading}}</h2>
       </v-flex>
       <v-flex lg4 class="d-flex justify-center align-center media">
-        <v-flex lg10 >
+        <v-flex lg10>
           <span class="descTitle">{{pict.title | shorttext(100) }}</span>
           <span class="descEmpty">{{pict.title}}</span>
           <a class="text-center" v-on:click="toggler($event)">Read More</a>
@@ -110,9 +112,9 @@ export default {
   display: none;
 }
 
-@media screen and (max-width: 1024px ){
-  .media{
+@media screen and (max-width: 1024px) {
+  .media {
     text-align: center;
   }
-};
+}
 </style>

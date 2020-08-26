@@ -1,5 +1,5 @@
 <template>
-  <v-container class="home container--fluid">
+  <v-container class="home">
     <v-row id="section1" class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16">
       <v-flex class="d-flex justify-end text-center" xs12 md12 lg5>
         <v-flex lg6>
@@ -20,10 +20,8 @@
           </div>
         </v-flex>
       </v-flex>
-      <v-flex id="layout-right" class="d-flex ml-auto rounded-lg" xs12 md12 lg7>
-        <v-row class="d-flex justify-center">
-          <v-img max-width="50%" id="pict" :src="pictMask.src" aspect-ratio="1" contain></v-img>
-        </v-row>
+      <v-flex class="d-flex ml-auto rounded-lg" xs12 md12 lg7>
+        <v-img id="pict" :src="pictMask.src" aspect-ratio="1" contain></v-img>
       </v-flex>
     </v-row>
 
@@ -68,20 +66,23 @@
       </v-row>
     </v-layout>
 
-    <v-row id="section3" class="d-flex justify-center align-center mb-16 mt-16">
-      <v-flex lg7 class="d-flex justify-center">
-        <v-img max-width="40%" :src="pictVirus.src" aspect-ratio="1" class="rounded-lg ml-16"></v-img>
+    <v-row
+      id="section3"
+      class="d-flex justify-center align-center mb-16 mt-16 pt-10 pb-16 text-center"
+    >
+      <v-flex lg6 class="d-flex justify-center align-center">
+        <v-img max-width="80%" :src="pictVirus.src" aspect-ratio="1" class="rounded-lg ml-1"></v-img>
       </v-flex>
 
-      <v-flex lg5>
-        <v-flex  lg7 >
+      <v-flex lg6>
+        <v-flex lg7 class="section3-text">
           <h2 class="heading-2">So, what is</h2>
           <h1 class="heading-1">Covid-19?</h1>
           <span class="tittle">
             Covid-19 adalah penyakit menular yang disebabkan oleh jenis coronavirus yang baru ditemukan bulan Desember 2019.
             Virus baru dan penyakit yang disebabkannya ini tidak dikenal sebelum mulainya wabah di Wuhan Tiongkok Covid-19 ini sekarang menjadi sebuah pandemi yang terjadi di banyak negara di seluruh dunia.
           </span>
-          <div class="text-center d-flex justify-start mt-4">
+          <div class="text-center d-flex justify-center mt-4">
             <v-btn
               to="/about"
               rounded
@@ -92,19 +93,19 @@
       </v-flex>
     </v-row>
 
-    <v-row class="d-flex justify-center align-center mb-16">
+    <v-row class="d-flex justify-center align-center mb-16 text-center">
       <v-flex xs12 md12 lg12 class="d-flex justify-center align-center">
         <h2 class="heading-2">Covid-19 Overall</h2>
       </v-flex>
-      <v-flex xs12 md12 lg5 class="d-flex justify-center align-center text-center">
+      <v-flex xs12 md12 lg5 class="d-flex justify-center align-center">
         <h1
           class="heading-1"
         >Over 780k People Died, We Must Stick Together to Going Through Over This</h1>
       </v-flex>
-      <v-flex xs12 m12 lg8 class="d-flex justify-center align-center text-center tittle">
+      <v-flex xs12 m12 lg8 class="d-flex justify-center align-center tittle">
         <p>Akibat covid-19 tardapat ± 1.010.579 orang pekerja yang terkena dampak rincinnya 873.090 pekerja dari 17.224 perusahaan dirumahkan, sedangkan 137.489 pekerja di PHK dari 22.753 perusahaan. Dalam bidang pendidikan sekolah sekolah dan universitas di liburkan aktivitas belajar mengajar dilakukan secara daring</p>
       </v-flex>
-      <v-flex xs12 m12 lg12 class="d-flex justify-center align-center text-center mx-auto">
+      <v-flex xs12 m12 lg12 class="d-flex justify-center align-center mx-auto">
         <v-btn
           to="/Impact"
           rounded
@@ -293,11 +294,6 @@ export default {
 }
 
 @media screen and (max-width: 1264px) {
-  #section1 #caption {
-    z-index: 1;
-    position: relative;
-    transform: translate(0%, 0%);
-  }
   .home {
     margin: 10px;
   }
