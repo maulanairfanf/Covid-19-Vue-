@@ -1,8 +1,8 @@
 <template>
-  <v-container class="home">
-    <v-text-field v-show="loader" color="light-blue 
-" loading></v-text-field>
-    <v-row id="section1" class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16">
+  <v-container class="home mx-auto">
+    <v-row
+      class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16"
+    >
       <v-flex class="d-flex justify-end text-center" xs12 md12 lg5>
         <v-flex lg6>
           <h3 class="heading-2">Covid-19 Alert</h3>
@@ -27,7 +27,7 @@
       </v-flex>
     </v-row>
 
-    <v-layout id="section2" class="d-flex justify-center text-center">
+    <v-container id="section2" class="d-flex justify-center text-center">
       <v-row id="section2-1" lg12>
         <v-flex xs12 lg3 class="pt-2">
           <v-list-item-content>
@@ -66,7 +66,7 @@
           </v-list-item-content>
         </v-flex>
       </v-row>
-    </v-layout>
+    </v-container>
 
     <v-row
       id="section3"
