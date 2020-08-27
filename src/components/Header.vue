@@ -12,10 +12,6 @@
         :key="network.network"
         :url="sharing.url"
         :title="sharing.title"
-        :description="sharing.description"
-        :quote="sharing.quote"
-        :hashtags="sharing.hashtags"
-        :twitterUser="sharing.twitterUser"
       >
         <v-btn icon>
           <v-icon :class="network.icon" :color="network.color">mdi-fecebook</v-icon>
@@ -80,14 +76,13 @@ export default {
     return {
       drawer: false,
       sharing: {
-        url: "https://news.vuejs.org/issues/180",
-        title:
-          "Say hi to Vite! A brand new, extremely fast development setup for Vue.",
-        description:
-          'This week, I’d like to introduce you to "Vite", which means "Fast". It’s a brand new development setup created by Evan You.',
-        quote: "The hot reload is so fast it's near instant. - Evan You",
-        hashtags: "vuejs,vite,javascript",
-        twitterUser: "youyuxi",
+        url: "https://covid-19-maulana.netlify.app/",
+        title: "Hi ingin tau lebih banyak tentang covid-19, lets check",
+        // description:
+        //   'This week, I’d like to introduce you to "Vite", which means "Fast". It’s a brand new development setup created by Evan You.',
+        // quote: "The hot reload is so fast it's near instant. - Evan You",
+        // hashtags: "vuejs,vite,javascript",
+        // twitterUser: "youyuxi",
       },
       networks: [
         {
@@ -126,3 +121,8 @@ nav {
   font-size: 26px;
 }
 </style>
+
+    // :description="sharing.description"
+    //     :quote="sharing.quote"
+    //     :hashtags="sharing.hashtags"
+    //     :twitterUser="sharing.twitterUser"
