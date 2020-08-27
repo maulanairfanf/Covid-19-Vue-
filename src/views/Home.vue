@@ -1,8 +1,6 @@
 <template>
   <v-container class="home mx-auto">
-    <v-row
-      class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16"
-    >
+    <v-row class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16">
       <v-flex class="d-flex justify-end text-center" xs12 md12 lg5>
         <v-flex lg6>
           <h3 class="heading-2">Covid-19 Alert</h3>
@@ -55,14 +53,14 @@
         </v-flex>
         <v-flex xs12>
           <v-list-item-content>
-            <v-list-item-subtitle id="update1">
+            <p id="update1">
               Last Update :
               {{infoCases.lastUpdate}}, Source :
               <a
                 id="update2"
                 href="https://github.com/mathdroid/covid-19-api"
               >Github</a>
-            </v-list-item-subtitle>
+            </p>
           </v-list-item-content>
         </v-flex>
       </v-row>
