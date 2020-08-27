@@ -5,6 +5,22 @@
       <v-toolbar-title>
         <span class="name-app">CovInfo</span>
       </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <ShareNetwork
+        v-for="network in networks"
+        :network="network.network"
+        :key="network.network"
+        :url="sharing.url"
+        :title="sharing.title"
+        :description="sharing.description"
+        :quote="sharing.quote"
+        :hashtags="sharing.hashtags"
+        :twitterUser="sharing.twitterUser"
+      >
+        <v-btn icon>
+          <v-icon :class="network.icon" :color="network.color">mdi-fecebook</v-icon>
+        </v-btn>
+      </ShareNetwork>
     </v-toolbar>
 
     <v-navigation-drawer app v-model="drawer" temporary class="grey lighten-5">
@@ -63,6 +79,36 @@ export default {
   data() {
     return {
       drawer: false,
+      sharing: {
+        url: "https://news.vuejs.org/issues/180",
+        title:
+          "Say hi to Vite! A brand new, extremely fast development setup for Vue.",
+        description:
+          'This week, I’d like to introduce you to "Vite", which means "Fast". It’s a brand new development setup created by Evan You.',
+        quote: "The hot reload is so fast it's near instant. - Evan You",
+        hashtags: "vuejs,vite,javascript",
+        twitterUser: "youyuxi",
+      },
+      networks: [
+        {
+          network: "facebook",
+          name: "Facebook",
+          icon: "mdi-facebook",
+          color: "#1877f2",
+        },
+        {
+          network: "twitter",
+          name: "Twitter",
+          icon: "mdi-twitter",
+          color: "#1da1f2",
+        },
+        {
+          network: "whatsapp",
+          name: "Whatsapp",
+          icon: "mdi-whatsapp",
+          color: "#25d366",
+        },
+      ],
     };
   },
 };
