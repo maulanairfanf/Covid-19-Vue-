@@ -172,9 +172,8 @@ export default {
     fetch("https://covid19.mathdro.id/api/countries")
       .then((Response) => Response.json())
       .then((data) => {
-        this.countCountry = parseInt(data.countries.length);
+        this.countCountry = data.countries.length;
         this.countrys = data.countries;
-        console.log(data.countries);
       })
       .catch(function (error) {
         console.log("error" + error);

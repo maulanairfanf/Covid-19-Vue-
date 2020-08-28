@@ -6,7 +6,7 @@ import vuetify from './plugins/vuetify';
 import VueSocialSharing from 'vue-social-sharing'
 
 
-Vue.config.productionTip = false
+
 Vue.use(VueSocialSharing);
 
 
