@@ -1,7 +1,11 @@
 {
     "name": "CovInfo",
     "short_name": "CovInfo",
-    "theme_color": "#4DBA87",
+    "description": "Information About Covid-19",
+    "theme_color": "#ffffff",
+    "background_color": "#f58f8f",
+    "display": "standalone",
+    "start_url": ".",
     "icons": [{
             "src": "./img/icons/logo-android-chrome-192x192.png",
             "sizes": "192x192",
@@ -9,11 +13,8 @@
         }, {
             "sizes": "512x512",
             "type": "image/png"
-        }, {
-            "src": "./img/icons/android-chrome-384x384.png",
-            "sizes": "384x384",
-            "type": "image/png"
-        }, {
+        },
+        {
             "src": "./img/icons/logo-android-chrome-maskable-192x192.png",
             "sizes": "192x192",
             "type": "image/png",
@@ -53,8 +54,5 @@
             "sizes": "192x192",
             "type": "image/png"
         }
-    ],
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#000000"
+    ]
 }
