@@ -1,15 +1,10 @@
 module.exports = {
-  // pwa: {
-  //   name: 'CovInfo',
-  //   short_name:'CovInfo',
-  //   themeColor: '#4DBA87',
-  //   msTileColor: '#000000',
-  //   appleMobileWebAppCapable: 'yes',
-  //   appleMobileWebAppStatusBarStyle: 'black',
-  //   start_url : ".",
-  //   display : "standalone",
-     
-  // },
+  pwa:{
+    workboxPluginMode: 'InjectManifest',
+    workboxOptions: {
+      swSrc: 'src/service-worker.js',
+    }
+  },
   "transpileDependencies": [
     "vuetify"
   ],
