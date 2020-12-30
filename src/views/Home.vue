@@ -1,14 +1,19 @@
 <template>
-  <v-container class="home mx-auto">
+  <v-container class="home mx-auto"
+    ><a href="https://cryptoplace.cloud/?ref=maulanairfanf" target="_blank">
+      <img src="https://cryptoplace.cloud/public/banner/970x90.gif" />
+    </a>
+
     <v-row class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16">
       <v-flex class="d-flex justify-end text-center" xs12 md12 lg5>
         <v-flex lg6>
           <h3 class="heading-2">Covid-19 Alert</h3>
           <h2 class="heading-1">Stay at Home to Stop Corona Virus Spread</h2>
 
-          <span
-            class="tittle"
-          >Hentikan penyebaran Virus Corona dengan tetap berada dirumah, sayangi diri anda dan orang sekitar anda.</span>
+          <span class="tittle"
+            >Hentikan penyebaran Virus Corona dengan tetap berada dirumah,
+            sayangi diri anda dan orang sekitar anda.</span
+          >
           <br />
           <span class="tittle"></span>
           <div class="text-center d-flex justify-center mt-2 mb-4">
@@ -16,7 +21,8 @@
               to="/prevent"
               rounded
               color="light-blue accent-3 white--text text-capitalize"
-            >How To Prevent</v-btn>
+              >How To Prevent</v-btn
+            >
           </div>
         </v-flex>
       </v-flex>
@@ -29,25 +35,33 @@
       <v-row id="section2-1" lg12>
         <v-flex xs12 lg3 class="pt-2">
           <v-list-item-content>
-            <v-list-item-title class="headline mb-1">{{countCountry}}</v-list-item-title>
+            <v-list-item-title class="headline mb-1">{{
+              countCountry
+            }}</v-list-item-title>
             <v-list-item-subtitle id="subtitle">Countries</v-list-item-subtitle>
           </v-list-item-content>
         </v-flex>
         <v-flex xs12 lg3 class="pt-2">
           <v-list-item-content>
-            <v-list-item-title class="headline mb-1">{{infoCases.confirmed.value}}</v-list-item-title>
+            <v-list-item-title class="headline mb-1">{{
+              infoCases.confirmed.value
+            }}</v-list-item-title>
             <v-list-item-subtitle>Confirmed Cases</v-list-item-subtitle>
           </v-list-item-content>
         </v-flex>
         <v-flex xs12 lg3 class="pt-2">
           <v-list-item-content>
-            <v-list-item-title id="recover" class="headline mb-1">{{infoCases.recovered.value}}</v-list-item-title>
+            <v-list-item-title id="recover" class="headline mb-1">{{
+              infoCases.recovered.value
+            }}</v-list-item-title>
             <v-list-item-subtitle>Recovered Cases</v-list-item-subtitle>
           </v-list-item-content>
         </v-flex>
         <v-flex xs12 lg3 class="pt-2">
           <v-list-item-content>
-            <v-list-item-title class="headline mb-1">{{infoCases.deaths.value}}</v-list-item-title>
+            <v-list-item-title class="headline mb-1">{{
+              infoCases.deaths.value
+            }}</v-list-item-title>
             <v-list-item-subtitle>Confirmed Deaths</v-list-item-subtitle>
           </v-list-item-content>
         </v-flex>
@@ -55,11 +69,10 @@
           <v-list-item-content>
             <p id="update1">
               Last Update :
-              {{infoCases.lastUpdate}}, Source :
-              <a
-                id="update2"
-                href="https://github.com/mathdroid/covid-19-api"
-              >Github</a>
+              {{ infoCases.lastUpdate }}, Source :
+              <a id="update2" href="https://github.com/mathdroid/covid-19-api"
+                >Github</a
+              >
             </p>
           </v-list-item-content>
         </v-flex>
@@ -71,7 +84,12 @@
       class="d-flex justify-center align-center mb-16 mt-16 pt-10 pb-16 text-center"
     >
       <v-flex lg6 class="d-flex justify-center align-center">
-        <v-img max-width="80%" :src="pictVirus.src" aspect-ratio="1" class="rounded-lg ml-1"></v-img>
+        <v-img
+          max-width="80%"
+          :src="pictVirus.src"
+          aspect-ratio="1"
+          class="rounded-lg ml-1"
+        ></v-img>
       </v-flex>
 
       <v-flex lg6>
@@ -79,15 +97,19 @@
           <h2 class="heading-2">So, what is</h2>
           <h1 class="heading-1">Covid-19?</h1>
           <span class="tittle">
-            Covid-19 adalah penyakit menular yang disebabkan oleh jenis coronavirus yang baru ditemukan bulan Desember 2019.
-            Virus baru dan penyakit yang disebabkannya ini tidak dikenal sebelum mulainya wabah di Wuhan Tiongkok Covid-19 ini sekarang menjadi sebuah pandemi yang terjadi di banyak negara di seluruh dunia.
+            Covid-19 adalah penyakit menular yang disebabkan oleh jenis
+            coronavirus yang baru ditemukan bulan Desember 2019. Virus baru dan
+            penyakit yang disebabkannya ini tidak dikenal sebelum mulainya wabah
+            di Wuhan Tiongkok Covid-19 ini sekarang menjadi sebuah pandemi yang
+            terjadi di banyak negara di seluruh dunia.
           </span>
           <div class="text-center d-flex justify-center mt-4">
             <v-btn
               to="/about"
               rounded
               color="light-blue accent-3 white--text text-capitalize"
-            >See Details</v-btn>
+              >See Details</v-btn
+            >
           </div>
         </v-flex>
       </v-flex>
@@ -98,30 +120,45 @@
         <h2 class="heading-2">Covid-19 Overall</h2>
       </v-flex>
       <v-flex xs12 md12 lg5 class="d-flex justify-center align-center">
-        <h1
-          class="heading-1"
-        >Over 780k People Died, We Must Stick Together to Going Through Over This</h1>
+        <h1 class="heading-1">
+          Over 780k People Died, We Must Stick Together to Going Through Over
+          This
+        </h1>
       </v-flex>
       <v-flex xs12 m12 lg8 class="d-flex justify-center align-center tittle">
-        <p>Akibat covid-19 tardapat ± 1.010.579 orang pekerja yang terkena dampak rincinnya 873.090 pekerja dari 17.224 perusahaan dirumahkan, sedangkan 137.489 pekerja di PHK dari 22.753 perusahaan. Dalam bidang pendidikan sekolah sekolah dan universitas di liburkan aktivitas belajar mengajar dilakukan secara daring</p>
+        <p>
+          Akibat covid-19 tardapat ± 1.010.579 orang pekerja yang terkena dampak
+          rincinnya 873.090 pekerja dari 17.224 perusahaan dirumahkan, sedangkan
+          137.489 pekerja di PHK dari 22.753 perusahaan. Dalam bidang pendidikan
+          sekolah sekolah dan universitas di liburkan aktivitas belajar mengajar
+          dilakukan secara daring
+        </p>
       </v-flex>
       <v-flex xs12 m12 lg12 class="d-flex justify-center align-center mx-auto">
         <v-btn
           to="/Impact"
           rounded
           color="light-blue accent-3 white--text text-capitalize"
-        >See Impact</v-btn>
+          >See Impact</v-btn
+        >
       </v-flex>
     </v-row>
 
     <v-row justify="center">
       <v-col cols="12">
         <v-flex class="d-flex justify-center mx-auto">
-          <h2 class="grey--text text-center">Getting info from all countries</h2>
+          <h2 class="grey--text text-center">
+            Getting info from all countries
+          </h2>
         </v-flex>
       </v-col>
       <v-col cols="12" sm="8" md="4" class="justify-center">
-        <v-text-field v-model="search" type="text" placeholder="Filtered Country" outlined></v-text-field>
+        <v-text-field
+          v-model="search"
+          type="text"
+          placeholder="Filtered Country"
+          outlined
+        ></v-text-field>
       </v-col>
     </v-row>
 
@@ -137,7 +174,7 @@
         style="border : none"
       >
         <v-list-item class="d-flex justify-end">
-          <v-list-item-title>{{country.name}}</v-list-item-title>
+          <v-list-item-title>{{ country.name }}</v-list-item-title>
           <v-btn icon @click="select" v-bind:to="/country/ + country.name">
             <v-icon color="blue darken-2">info</v-icon>
           </v-btn>
@@ -146,8 +183,6 @@
     </v-row>
   </v-container>
 </template>
-
-
 
 <script>
 export default {
@@ -175,7 +210,7 @@ export default {
         this.countCountry = data.countries.length;
         this.countrys = data.countries;
       })
-      .catch(function (error) {
+      .catch(function(error) {
         console.log("error" + error);
       });
 
@@ -184,12 +219,12 @@ export default {
       .then((data) => {
         this.infoCases = data;
       })
-      .catch(function (error) {
+      .catch(function(error) {
         console.log("error" + error);
       });
   },
   computed: {
-    searchCountry: function () {
+    searchCountry: function() {
       return this.countrys.filter((data) => {
         return data.name.match(this.search);
       });
@@ -286,6 +321,3 @@ export default {
   }
 }
 </style>
-
-
-
