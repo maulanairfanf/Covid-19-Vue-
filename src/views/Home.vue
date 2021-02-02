@@ -1,7 +1,6 @@
 <template>
   <v-container class="home mx-auto"
     >
-
     <v-row class="d-flex flex-lg-wrap justify-center align-center pt-10 pb-16">
       <v-flex class="d-flex justify-end text-center" xs12 md12 lg5>
         <v-flex lg6>
