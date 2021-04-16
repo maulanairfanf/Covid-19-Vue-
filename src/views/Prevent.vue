@@ -41,6 +41,11 @@
         </v-card-text>
       </v-card>
     </v-row>
+    <v-row class="d-flex justify-center">
+      <a href="http://www.freepik.com" class="align-center"
+        >Designed by Freepik</a
+      ></v-row
+    >
   </v-container>
 </template>
 
